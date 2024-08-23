@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker push spearw/deseq:latest
+docker push spearw/deseq2:latest

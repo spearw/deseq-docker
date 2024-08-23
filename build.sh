@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-docker build -t spearw/deseq:latest --platform linux/amd64 .
+docker build -t spearw/deseq2:latest --platform linux/amd64 .
 
