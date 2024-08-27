@@ -12,8 +12,12 @@ RUN apt-get update && \
 # Work in root
 WORKDIR /root
 
+# Libcurl required by BiocManager
+RUN apt-get install libcurl4-openssl-dev -y
+
 # Install the R packages
 # Latest version of Bioconductor with DESeq2 is 3.19
 RUN Rscript  \
-    -e "install.packages('BiocManager',dependencies=TRUE, version='3.19', repos='http://cran.rstudio.com/')"  \
-    -e 'BiocManager::install("DESeq2")'
+    -e 'install.packages("BiocManager", repos="https://cran.rstudio.com", ask=FALSE)' \
+    -e "BiocManager::install(version='3.19', update=TRUE, ask=FALSE)" \
+    -e 'BiocManager::install("DESeq2", ask=FALSE)'
