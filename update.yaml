@@ -1,0 +1,9 @@
+name: pydeseq2
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.11
+  - pydeseq2=0.4.12
+  - pyarrow=18.0.0

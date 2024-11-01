@@ -18,7 +18,7 @@ bash build.sh
 To test this tool from the command line:
 
 ```bash
-docker run -it spearw/deseq2:latest
+bash test.sh
 ```
 
 Disclaimer
